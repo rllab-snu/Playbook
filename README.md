@@ -1,6 +1,6 @@
-# Playbook: Scalable Offline Discrete Skill Discovery for Long-Horizon Decision-Making Problems
+# Playbook: Scalable Discrete Skill Discovery from Unstructured Datasets for Long-Horizon Decision-Making Problems
 
-This repository is the official implementation of "Playbook: Scalable Offline Discrete Skill Discovery for Long-Horizon Decision-Making Problems". 
+This repository is the official implementation of "Playbook: Scalable Discrete Skill Discovery from Unstructured Datasets for Long-Horizon Decision-Making Problems". 
 
 ## Implementation Reference
 
