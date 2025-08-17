@@ -47,6 +47,7 @@ pip install -e . --find-links https://download.pytorch.org/whl/torch_stable.html
 ## Training
 
 1. Franka Kitchen Environment
+
 1.1. Low-Level Models
 ```
 python train_low_level.py --task kitchen-partial --filename test1 --n_subpols [16] --n_weights [32] --z_dep_dim 32 --z_ind_dim 16 --total_steps 200000
@@ -62,6 +63,7 @@ python train_high_level.py --task kitchen-partial --filename test1 --loadname te
 ```
 
 2. CALVIN Environment
+
 2.1. Low-Level Models
 ```
 python train_low_level.py --task calvin --filename test1 --n_subpols [32] --n_weights [64] --z_dep_dim 64 --z_ind_dim 32 --total_steps 300000
@@ -78,6 +80,7 @@ python train_high_level.py --task calvin --filename test1 --loadname test1_play6
 ## Training for Playbook Extension
 
 1. Low-Level Models
+
 1.1. Step 0 (using base dataset)
 ```
 python train_low_level.py --task calvin --filename cont1 --n_subpols [32] --n_weights [64] --z_dep_dim 64 --z_ind_dim 32 --do_continual 1 --use_newdata 0 --do_distill 0 --continual_step 1 --total_steps 300000
@@ -102,6 +105,7 @@ python train_low_level.py --task calvin --filename cont1 --loadname cont1_play64
 
 
 2. Trajectory Transformer Model
+
 2.1. Step 0 (using base dataset)
 ```
 python train_high_level.py --task calvin --filename cont1 --loadname cont1_play64_subpol32_LS64_LA32_H10 --n_subpols [32] --n_weights [64] --z_dep_dim 64 --z_ind_dim 32 --do_continual 1 --use_newdata 0 --continual_step 1 --work dynamics
@@ -114,6 +118,7 @@ python train_high_level.py --task calvin --filename cont1 --loadname cont1_play6
 
 
 3. State Distance Metric Model
+
 3.1. Step 0 (using base dataset)
 ```
 python train_high_level.py --task calvin --filename cont1 --loadname cont1_play64_subpol32_LS64_LA32_H10 --n_subpols [32] --n_weights [64] --z_dep_dim 64 --z_ind_dim 32 --do_continual 1 --use_newdata 0 --continual_step 1 --work distance
